@@ -96,26 +96,6 @@ not be able to create new temporary files in the /tmp directory.
 - If increasing the size of the /tmp partition is not possible, consider moving some of the
     /tmp files to another partition with more available space.
 
-**Description:** When the file system space utilization on a Linux server for / (root) has exceeded
-the threshold, it means that the root directory is running out of space. This can cause significant
-issues, including system instability, inability to save new data, and potential data loss.
-
-**Resolution steps:**
-
-- Check Disk Space: Use the 'df' command to check the disk space utilization. This
-    command will provide a summary of the disk usage on your Linux server.
-- Identify Large Files: Use the 'du' command to identify the directories consuming large
-    amounts of space. You can also use the 'find' command to locate files above a certain
-    size.
-- Clean Up Unnecessary Files: Remove unnecessary files or move them to a different
-    location. You can use the 'rm' command to delete files and the 'mv' command to move
-    files.
-- Clean Up Log Files: Log files often consume a lot of space. Use the 'logrotate' utility to
-    manage these files. This utility allows automatic rotation, compression, removal, and mailing
-    of log files.
-- Increase Disk Space: If cleaning up files doesn't free up enough space, consider
-    increasing the disk space. You can do this by adding a new disk or expanding the existing
-    disk.
 
 **Issue:** High CPU utilization in Linux OS
 
@@ -190,30 +170,6 @@ Resolution steps:
     is resolved.
 
 ```
-Description: The vAgentManager service is a crucial component of the Windows operating
-system. It is responsible for managing various tasks and processes, ensuring that your system
-runs smoothly. However, if this service is stopped, it can lead to several issues, including system
-instability and performance degradation.
-The most common reason for the vAgentManager service to stop is due to incorrect system
-settings or irregularities in the Windows registry. It can also occur due to malware or virus
-attacks.
-```
-```
-Resolution steps:
-```
-- Open the Services window: Press the Windows key + R, type \"services.msc\" in the Run
-dialog box, and then press Enter.
-- Locate the vAgentManager service: In the Services window, scroll down to find
-the vAgentManager service.
-- Check the service status: If the service status is Stopped, you need to start it.
-- Start the service: Right-click on the vAgentManager service and select Start from the context
-menu.
-- Verify the startup type: Ensure that the Startup type of the vAgentManager service is set to
-Automatic. If not, right-click on the service, select Properties, and then set the Startup type to
-Automatic.
-- Restart your computer: After making these changes, restart your computer to ensure that the
-changes take effect.
-
 ```
 Issue: Windows Cluster heartbeat missing.
 ```
